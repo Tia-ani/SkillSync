@@ -47,9 +47,8 @@ function LoginPage() {
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.5 }}
-          className="w-full max-w-md"
         >
-          <div className="bg-white dark:bg-neutral-800 rounded-xl shadow-sm p-8">
+          <div className="bg-white dark:bg-neutral-800 rounded-xl shadow-sm p-8 max-w-md mx-auto">
             <div className="flex justify-center mb-6">
               <div className="bg-gradient-to-r from-primary-500 to-accent-500 w-16 h-16 rounded-xl flex items-center justify-center text-white font-bold text-2xl">
                 S
@@ -90,12 +89,9 @@ function LoginPage() {
                   type="password"
                   className="input w-full"
                   placeholder="Enter your password"
-                  value="password" // For demo purposes
+                  value="password"
                   readOnly
                 />
-                <p className="text-xs text-neutral-500 mt-1">
-                  For this demo, any username works with any password
-                </p>
               </div>
               
               <button

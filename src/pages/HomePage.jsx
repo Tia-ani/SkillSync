@@ -71,7 +71,7 @@ function HomePage() {
               className="rounded-xl overflow-hidden shadow-2xl"
             >
               <img 
-                src="https://images.pexels.com/photos/3184292/pexels-photo-3184292.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2" 
+                src="https://ncte.org/wp-content/uploads/2018/01/CollaborativeLearning.png" 
                 alt="SkillSync Dashboard" 
                 className="w-full h-auto rounded-xl"
               />
