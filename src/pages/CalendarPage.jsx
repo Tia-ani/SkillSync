@@ -72,6 +72,7 @@ function CalendarPage() {
   const handlePlanTomorrow = () => {
     const tomorrow = addDays(new Date(), 1)
     setSelectedDate(tomorrow)
+    setCurrentDate(tomorrow)
   }
   
   return (
@@ -80,7 +81,7 @@ function CalendarPage() {
         <motion.h1 
           initial={{ opacity: 0, y: -10 }}
           animate={{ opacity: 1, y: 0 }}
-          className="text-3xl font-bold"
+          className="text-3xl font-bold text-neutral-900 dark:text-white"
         >
           Calendar
         </motion.h1>
@@ -103,7 +104,7 @@ function CalendarPage() {
         >
           <div className="card p-6">
             <div className="flex items-center justify-between mb-6">
-              <h2 className="text-xl font-semibold">
+              <h2 className="text-xl font-semibold text-neutral-900 dark:text-white">
                 {format(currentDate, 'MMMM yyyy')}
               </h2>
               <div className="flex space-x-2">
@@ -112,14 +113,14 @@ function CalendarPage() {
                   className="p-2 rounded-full hover:bg-neutral-100 dark:hover:bg-neutral-800 transition-colors"
                   aria-label="Previous month"
                 >
-                  <FiChevronLeft className="w-5 h-5" />
+                  <FiChevronLeft className="w-5 h-5 text-neutral-600 dark:text-neutral-400" />
                 </button>
                 <button
                   onClick={nextMonth}
                   className="p-2 rounded-full hover:bg-neutral-100 dark:hover:bg-neutral-800 transition-colors"
                   aria-label="Next month"
                 >
-                  <FiChevronRight className="w-5 h-5" />
+                  <FiChevronRight className="w-5 h-5 text-neutral-600 dark:text-neutral-400" />
                 </button>
               </div>
             </div>
@@ -129,7 +130,7 @@ function CalendarPage() {
               {['Sun', 'Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat'].map(day => (
                 <div
                   key={day}
-                  className="bg-neutral-100 dark:bg-neutral-800 p-2 text-center text-sm font-medium"
+                  className="bg-neutral-100 dark:bg-neutral-800 p-2 text-center text-sm font-medium text-neutral-700 dark:text-neutral-300"
                 >
                   {day}
                 </div>
@@ -177,7 +178,7 @@ function CalendarPage() {
                           ? 'text-primary-600 dark:text-primary-400' 
                           : !isSameMonth(day, currentDate) 
                             ? 'text-neutral-400 dark:text-neutral-600' 
-                            : ''
+                            : 'text-neutral-900 dark:text-white'
                       }`}>
                         {format(day, 'd')}
                       </span>
@@ -223,7 +224,7 @@ function CalendarPage() {
         >
           <div className="card p-6">
             <div className="mb-4">
-              <h2 className="text-xl font-semibold mb-1">
+              <h2 className="text-xl font-semibold text-neutral-900 dark:text-white mb-1">
                 {isToday(selectedDate) 
                   ? "Today's Tasks" 
                   : format(selectedDate, 'MMMM d, yyyy')}
